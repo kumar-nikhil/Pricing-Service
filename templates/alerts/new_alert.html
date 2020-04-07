@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header><h1>Create Alert</h1></header>
+<section class="create-alert-form">
+    <form method="post">
+        <div class="form-group">
+            <label id="name">Alert Name</label>
+            <input type="name" id="name" class="form-control" name="name" placeholder="apple ipad"/>
+        </div>
+        <div class="form-group">
+            <label id="item_url">ITEM URL</label>
+            <input type="text" id="item_url" class="form-control" name="item_url" placeholder="xxxxxxxx.....xxxx"/>
+        </div>
+        <hr>
+         <div class="form-group">
+            <label id="price_limit">Price Limit</label>
+            <input type="text" id="price_limit" class="form-control" name="price_limit" placeholder="0000" aria-describedby="pricelimithelp"/>
+             <small id="pricelimithelp" class="form-text text-muted">
+                 Enter a threshold for price alert
+             </small>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</section>
+
+
+{% endblock %}

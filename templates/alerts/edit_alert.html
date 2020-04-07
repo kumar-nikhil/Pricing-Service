@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header><h1>Update Alert</h1></header>
+<section class="update-alert-form">
+    <form method="post">
+        <div class="form-group">
+            <label id="name">Alert Name</label>
+            <input type="name" id="name" class="form-control" name="name" value = "{{ alert.name }}" disabled/>
+        </div>
+        <div class="form-group">
+            <label id="item_url">ITEM URL</label>
+            <input type="text" id="item_url" class="form-control" name="item_url" value ="{{ alert.item.url }}" disabled/>
+        </div>
+        <hr>
+         <div class="form-group">
+            <label id="price_limit">Price Limit</label>
+            <input type="text" id="price_limit" class="form-control" name="price_limit" value="{{ alert.price_limit }}" aria-describedby="pricelimithelp"/>
+             <small id="pricelimithelp" class="form-text text-muted">
+                 Enter a threshold for price alert
+             </small>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</section>
+
+
+{% endblock %}

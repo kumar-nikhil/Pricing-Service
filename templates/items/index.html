@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <h1>Items</h1>
+</header>
+<section>
+    <div class="list-group mb-3">
+        {% for item in items %}
+            <div class="list-group-item mb-1">
+                <h4>Item</h4>
+                <p>
+                    <a href="{{ item.url }}">{{ item.url }}</a>
+                <p>{{ item._id }}</p>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+    <a class="btn btn-primary" href="{{ url_for('items.new_item') }}">
+        Create New
+    </a>
+    <a class="btn btn-danger" href="{{ url_for('users.logout') }}">
+        Logout
+    </a>
+</section>
+
+
+
+
+{% endblock %}
